@@ -177,7 +177,7 @@ class MCPDatabaseConnector:
             context_id, json.dumps(context_data)
         )
         await self.mongo.contexts.insert_one({"_id": context_id, "data": context_data, "timestamp": datetime.utcnow()})
-        await self.redis.setex(`context:${context_id}`, 3600, json.dumps(context_data))`,
+        await self.redis.setex("context:" + context_id, 3600, json.dumps(context_data))`,
     downloadUrl: "/downloads/mcp-database-integration.zip"
   },
 
