@@ -80,13 +80,13 @@ try {
 
   const result = await response.json();  
   if (result.result === "success") {  
-    setStatus("You’ve successfully subscribed to our newsletter!");  
+    setStatus("✅ Subscribed successfully!");  
     setEmail("");  
   } else {  
     setStatus("❌ Something went wrong");  
   }  
 } catch (error) {  
-  setStatus("Unable to connect to the server. Try again later.");  
+  setStatus("❌ Error connecting to server");  
 }
 
 };
