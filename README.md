@@ -1,15 +1,3 @@
-Got it 👍
-I’ll polish your README:
-
-* Add **repo link** (`https://github.com/Harshsfd/MCP-Project`).
-* Make the **navigation bar at the top** more stylish, with clickable anchor links to every main section.
-* Improve **section headers** with emojis/icons.
-* Keep the **tech stack icons** and badges.
-* Clean formatting so it looks professional on GitHub.
-
-Here’s the full improved `README.md` code for you:
-
-````markdown
 <h1 align="center">
   <img src="https://raw.githubusercontent.com/github/explore/main/topics/react/react.png" width="70" />
   <br />
