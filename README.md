@@ -94,7 +94,6 @@ npm run preview
 
 ## 📂 Project Structure
 
-```
 / (repo root)
 ├─ index.html
 ├─ package.json
@@ -111,7 +110,6 @@ npm run preview
    ├─ api.ts              # API helper (placeholder URL)
    ├─ hooks/              # custom hooks
    └─ lib/                # utils
-```
 
 ---
 
