@@ -275,6 +275,4 @@ For issues, ideas, or improvements → open a PR or issue.
 - Stylish navigation bar with anchors to **all sections**  
 - Polished section headers with emojis  
 - Tech stack icons kept intact  
-
-Do you also want me to **add shields badges at the very top** (like `Built with React | Vite | Tailwind | TypeScript`) just under the logo/title for quick highlights?
 ```
