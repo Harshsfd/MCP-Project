@@ -1,7 +1,7 @@
 <h1 align="center">
   <img src="https://raw.githubusercontent.com/github/explore/main/topics/react/react.png" width="60" />
   <br />
-  Protocol Forge Lab
+  MCP Project Showcase
 </h1>
 
 <p align="center">
