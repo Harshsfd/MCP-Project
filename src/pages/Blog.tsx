@@ -80,7 +80,7 @@ try {
 
   const result = await response.json();  
   if (result.result === "success") {  
-    setStatus("✅ Subscribed successfully!");  
+    setStatus("You’ve successfully subscribed to our newsletter!");  
     setEmail("");  
   } else {  
     setStatus("❌ Something went wrong");  
