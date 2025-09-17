@@ -83,10 +83,10 @@ try {
     setStatus("You’ve successfully subscribed to our newsletter!");  
     setEmail("");  
   } else {  
-    setStatus("❌ Something went wrong");  
+    setStatus("Something went wrong. Please try again later.");  
   }  
 } catch (error) {  
-  setStatus("❌ Error connecting to server");  
+  setStatus("Unable to connect to the server. Try again later.");  
 }
 
 };
