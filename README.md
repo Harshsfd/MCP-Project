@@ -1,5 +1,17 @@
+Got it 👍
+I’ll polish your README:
+
+* Add **repo link** (`https://github.com/Harshsfd/MCP-Project`).
+* Make the **navigation bar at the top** more stylish, with clickable anchor links to every main section.
+* Improve **section headers** with emojis/icons.
+* Keep the **tech stack icons** and badges.
+* Clean formatting so it looks professional on GitHub.
+
+Here’s the full improved `README.md` code for you:
+
+````markdown
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/github/explore/main/topics/react/react.png" width="60" />
+  <img src="https://raw.githubusercontent.com/github/explore/main/topics/react/react.png" width="70" />
   <br />
   MCP Project Showcase
 </h1>
@@ -10,10 +22,27 @@
 
 <p align="center">
   <a href="https://protocol-forge-lab.vercel.app/"><b>🌐 Live Demo</b></a> •
-  <a href="#features">Features</a> •
-  <a href="#tech-stack">Tech Stack</a> •
-  <a href="#quick-start">Quick Start</a> •
-  <a href="#project-structure">Project Structure</a>
+  <a href="https://github.com/Harshsfd/MCP-Project"><b>📦 Repository</b></a>
+</p>
+
+---
+
+<p align="center">
+  <a href="#-features">✨ Features</a> •
+  <a href="#-tech-stack">🛠 Tech Stack</a> •
+  <a href="#-quick-start">⚡ Quick Start</a> •
+  <a href="#-project-structure">📂 Project Structure</a> •
+  <a href="#-how-content--data-work">📝 Data</a> •
+  <a href="#-api-config-placeholder">🌐 API</a> •
+  <a href="#-deployment-vercel">🚀 Deployment</a> •
+  <a href="#-detailed-analysis--architecture-notes">🔍 Analysis</a> •
+  <a href="#-recommended-improvements">📌 Improvements</a> •
+  <a href="#-how-to-add-a-new-project">➕ Add Project</a> •
+  <a href="#-contributing">🤝 Contributing</a> •
+  <a href="#-troubleshooting">❓ Troubleshooting</a> •
+  <a href="#-license">📜 License</a> •
+  <a href="#-acknowledgements">🙏 Acknowledgements</a> •
+  <a href="#-contact">📬 Contact</a>
 </p>
 
 ---
@@ -32,15 +61,15 @@
 
 <p align="center">
   <!-- Core -->
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="45" height="45" title="React" /> 
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="45" height="45" title="TypeScript" /> 
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="45" height="45" title="JavaScript" /> 
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" width="45" height="45" title="Vite" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="45" height="45" title="HTML5" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="45" height="45" title="CSS3" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="45" title="React" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="45" title="TypeScript" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="45" title="JavaScript" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" width="45" title="Vite" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="45" title="HTML5" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="45" title="CSS3" />
 
   <!-- Styling -->
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="45" height="45" title="Tailwind CSS" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="45" title="Tailwind CSS" />
 
   <!-- Routing / Query / Forms -->
   <img src="https://img.shields.io/badge/React%20Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" height="28" title="React Router" />
@@ -58,9 +87,9 @@
   <img src="https://img.shields.io/badge/Socket.io-010101?style=for-the-badge&logo=socketdotio&logoColor=white" height="28" title="Socket.io" />
 
   <!-- Deployment -->
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" width="45" height="45" title="Vercel" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="45" height="45" title="Git" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="45" height="45" title="GitHub" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" width="45" title="Vercel" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="45" title="Git" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="45" title="GitHub" />
 </p>
 
 ---
@@ -71,8 +100,8 @@
 
 ```bash
 # 1. Clone repo
-git clone <your-repo-url>
-cd protocol-forge-lab
+git clone https://github.com/Harshsfd/MCP-Project
+cd MCP-Project
 
 # 2. Install dependencies
 npm install
@@ -88,7 +117,7 @@ npm run build
 
 # 5. Preview production build locally
 npm run preview
-```
+````
 
 ---
 
@@ -112,6 +141,7 @@ npm run preview
    ├─ hooks/              # custom hooks
    └─ lib/                # utils
 ```
+
 ---
 
 ## 📝 How Content & Data Work
@@ -210,9 +240,10 @@ Edit `src/data/mockProjects.ts`:
 1. Fork repo
 2. Create a branch:
 
-   ```bash
-   git checkout -b feat/add-new-project
-   ```
+```bash
+git checkout -b feat/add-new-project
+```
+
 3. Make changes & test with `npm run dev`
 4. Commit, push, and open a PR
 
@@ -233,7 +264,7 @@ Edit `src/data/mockProjects.ts`:
 
 ## 📜 License
 
-MIT License © 2025 [Harsh Bhardwaj](https://github.com/)
+MIT License © 2025 [Harsh Bhardwaj](https://github.com/Harshsfd)
 
 ---
 
@@ -251,5 +282,11 @@ For issues, ideas, or improvements → open a PR or issue.
 
 ---
 
-Would you like me to **design a custom logo banner (SVG/PNG)** for the top instead of just using the React logo?
+✅ Now you have:  
+- Repo link added  
+- Stylish navigation bar with anchors to **all sections**  
+- Polished section headers with emojis  
+- Tech stack icons kept intact  
+
+Do you also want me to **add shields badges at the very top** (like `Built with React | Vite | Tailwind | TypeScript`) just under the logo/title for quick highlights?
 ```
