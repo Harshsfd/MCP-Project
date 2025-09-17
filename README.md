@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://protocol-forge-lab.vercel.app/"><b>🌐 Live Demo</b></a> •
+  <a href="https://mcp-project-cyan.vercel.app/"><b>🌐 Live Demo</b></a> •
   <a href="https://github.com/Harshsfd/MCP-Project"><b>📦 Repository</b></a>
 </p>
 
