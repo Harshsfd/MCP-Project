@@ -6,12 +6,12 @@ import Navbar from "@/components/Navbar";
 import { useState } from "react";
 
 // ✅ Import images from src/data
-import Blog1 from "@/data/Blog1.jpg";
-import Blog2 from "@/data/Blog2.jpg";
-import Blog3 from "@/data/Blog3.jpg";
-import Blog4 from "@/data/Blog4.jpg";
-import Blog5 from "@/data/Blog5.jpg";
-import Blog6 from "@/data/Blog6.jpg";
+import Blog1 from "@/data/Blog1.jpeg";
+import Blog2 from "@/data/Blog2.jpeg";
+import Blog3 from "@/data/Blog3.jpeg";
+import Blog4 from "@/data/Blog4.jpeg";
+import Blog5 from "@/data/Blog5.jpeg";
+import Blog6 from "@/data/Blog6.jpeg";
 
 const blogPosts = [
   {
