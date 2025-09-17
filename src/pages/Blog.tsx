@@ -68,7 +68,7 @@ const [status, setStatus] = useState("");
 // ✅ Handle Subscribe
 const handleSubscribe = async () => {
 if (!email) {
-setStatus("⚠️ Please enter a valid email");
+setStatus("Please enter a valid email");
 return;
 }
 
