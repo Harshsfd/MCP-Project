@@ -257,3 +257,5 @@ return (
 
 );
 };
+
+export default Blog;
