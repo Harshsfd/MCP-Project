@@ -187,34 +187,45 @@ const About = () => {
         </section>
 
         {/* Contact/CTA */}
-        <section className="py-16 bg-gradient-card">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Get Started Today</h2>
-            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Ready to dive into Model Context Protocol development? 
-              Explore our projects and start building amazing applications.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/projects">
-                <Button size="lg" className="bg-gradient-primary hover:shadow-glow">
-                  <Code2 className="w-4 h-4 mr-2" />
-                  Browse Projects
-                </Button>
-              </Link>
-              
-              <Button variant="outline" size="lg" className="glass-card">
-                <Github className="w-4 h-4 mr-2" />
-                View on GitHub
-              </Button>
-              
-              <Button variant="outline" size="lg" className="glass-card">
-                <Mail className="w-4 h-4 mr-2" />
-                Contact Us
-              </Button>
-            </div>
-          </div>
-        </section>
+<section className="py-16 bg-gradient-card">
+  <div className="container mx-auto px-4 text-center">
+    <h2 className="text-3xl font-bold mb-4">Get Started Today</h2>
+    <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+      Ready to dive into Model Context Protocol development? 
+      Explore our projects and start building amazing applications.
+    </p>
+    
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      {/* Internal Link */}
+      <Link to="/projects">
+        <Button size="lg" className="bg-gradient-primary hover:shadow-glow">
+          <Code2 className="w-4 h-4 mr-2" />
+          Browse Projects
+        </Button>
+      </Link>
+
+      {/* GitHub Profile */}
+      <a 
+        href="https://github.com/Harshsfd" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        <Button variant="outline" size="lg" className="glass-card">
+          <Github className="w-4 h-4 mr-2" />
+          View on GitHub
+        </Button>
+      </a>
+
+      {/* Contact Mail */}
+      <a href="mailto:harshbhardwajsfd@gmail.com">
+        <Button variant="outline" size="lg" className="glass-card">
+          <Mail className="w-4 h-4 mr-2" />
+          Contact Us
+        </Button>
+      </a>
+    </div>
+  </div>
+</section>
       </main>
     </div>
   );
