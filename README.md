@@ -1,310 +1,199 @@
-Protocol Forge Lab — README
+`<h1 align="center">
+  <img src="https://raw.githubusercontent.com/github/explore/main/topics/react/react.png" width="60" />
+  <br />
+  Protocol Forge Lab
+</h1>
 
-Live demo: https://protocol-forge-lab.vercel.app/
+<p align="center">
+  🚀 A modern React + TypeScript + Vite showcase for MCP (Model Context Protocol) projects, tutorials, and blogs.
+</p>
 
-
----
-
-Overview
-
-Protocol Forge Lab is a front-end showcase for MCP (Model Context Protocol) projects and tutorials. It’s a modern React + TypeScript + Vite codebase (Vite-powered SPA) that highlights sample MCP projects, blog posts, and documentation pages. The site content is currently driven by local/mock data and static assets in the repository.
-
-This README was created after a deep analysis of the repository and the running demo. Use this README as a drop-in file for a GitHub repo — copy & paste the whole file into your repository's README.md.
-
-
----
-
-Table of contents
-
-Features
-
-Tech stack
-
-Quick start (copy/paste)
-
-Project structure
-
-How content & data work (where to edit)
-
-API config (placeholder)
-
-Deployment (Vercel)
-
-Detailed analysis & architecture notes
-
-Recommended improvements & priorities
-
-How to contribute
-
-License
-
-
+<p align="center">
+  <a href="https://protocol-forge-lab.vercel.app/"><b>🌐 Live Demo</b></a> •
+  <a href="#features">Features</a> •
+  <a href="#tech-stack">Tech Stack</a> •
+  <a href="#quick-start">Quick Start</a> •
+  <a href="#project-structure">Project Structure</a>
+</p>
 
 ---
 
-Features
-
-Single-page React app (Vite) with multiple pages: Home, Projects, Project Detail, Blog, About
-
-Demo data for projects (static mockProjects.ts) and blog posts
-
-Reusable UI components (Navbar, Hero, ProjectCard, CodeBlock, UI primitives under components/ui)
-
-Uses React Router for client routing and TanStack Query (QueryClient) for data fetching patterns
-
-Typical modern UX pieces: toasts, tooltips, code syntax highlighting (Prism/PrismJS), carousels, icons (lucide)
-
-Ready to deploy to Vercel (project already includes vercel.json)
-
-
+## ✨ Features
+- ⚡ **Single-page React app (Vite)** with multiple pages: Home, Projects, Project Detail, Blog, About  
+- 📂 **Demo data** for projects & blog posts (`src/data/`)  
+- 🧩 **Reusable UI components** (Navbar, Hero, ProjectCard, CodeBlock, UI primitives)  
+- 🔗 **React Router** for client routing + **TanStack Query** for data fetching patterns  
+- 🎨 **Modern UX**: toasts, tooltips, syntax highlighting (PrismJS), carousels, icons (lucide)  
+- ☁️ **Ready-to-deploy** with [Vercel](https://vercel.com/) (includes `vercel.json`)  
 
 ---
 
-Tech stack
+## 🛠 Tech Stack
 
-Key packages observed in the repository:
+<p align="center">
+  <!-- Core -->
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="45" height="45" title="React" /> 
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="45" height="45" title="TypeScript" /> 
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="45" height="45" title="JavaScript" /> 
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" width="45" height="45" title="Vite" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="45" height="45" title="HTML5" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="45" height="45" title="CSS3" />
 
-Vite (build tool)
+  <!-- Styling -->
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="45" height="45" title="Tailwind CSS" />
 
-React 18 + TypeScript
+  <!-- Routing / Query / Forms -->
+  <img src="https://img.shields.io/badge/React%20Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" height="28" title="React Router" />
+  <img src="https://img.shields.io/badge/TanStack%20Query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white" height="28" title="TanStack Query" />
+  <img src="https://img.shields.io/badge/React%20Hook%20Form-EC5990?style=for-the-badge&logo=reacthookform&logoColor=white" height="28" title="React Hook Form" />
 
-Tailwind CSS (utility-first styling)
+  <!-- UI & Icons -->
+  <img src="https://img.shields.io/badge/Radix%20UI-161618?style=for-the-badge&logo=radixui&logoColor=white" height="28" title="Radix UI" />
+  <img src="https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcnui&logoColor=white" height="28" title="shadcn/ui" />
+  <img src="https://img.shields.io/badge/Lucide-0D9488?style=for-the-badge&logo=lucide&logoColor=white" height="28" title="Lucide Icons" />
 
-Radix UI primitives and a components/ui set (shadcn-style component wrappers)
+  <!-- Utils -->
+  <img src="https://img.shields.io/badge/PrismJS-323330?style=for-the-badge&logo=prism&logoColor=white" height="28" title="PrismJS" />
+  <img src="https://img.shields.io/badge/Embla%20Carousel-111827?style=for-the-badge&logo=carousel&logoColor=white" height="28" title="Embla Carousel" />
+  <img src="https://img.shields.io/badge/Socket.io-010101?style=for-the-badge&logo=socketdotio&logoColor=white" height="28" title="Socket.io" />
 
-@tanstack/react-query (QueryClient)
-
-react-router-dom (routing)
-
-react-hook-form (forms)
-
-lucide-react (icons)
-
-prismjs (code highlighting)
-
-embla-carousel-react, socket.io-client (used in some UI pieces)
-
-
+  <!-- Deployment -->
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" width="45" height="45" title="Vercel" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="45" height="45" title="Git" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="45" height="45" title="GitHub" />
+</p>
 
 ---
 
-Quick start (copy/paste)
+## ⚡ Quick Start
 
-> Requirements: Node.js 18+ recommended, npm (or pnpm/yarn)
+> Requirements: **Node.js 18+**
 
-
-
-# 1. clone repo
+```bash
+# 1. Clone repo
 git clone <your-repo-url>
 cd protocol-forge-lab
 
-# 2. install
+# 2. Install dependencies
 npm install
-# or with pnpm
-# pnpm install
+# or
+pnpm install
 
-# 3. run dev server
+# 3. Run dev server
 npm run dev
-# open http://localhost:5173 (Vite default)
+# open http://localhost:5173
 
-# 4. build for production
+# 4. Build for production
 npm run build
 
-# 5. preview production build locally
+# 5. Preview production build locally
 npm run preview
 
 
 ---
 
-Project structure (high level)
+## 📂 Project Structure
 
+```
 / (repo root)
 ├─ index.html
 ├─ package.json
 ├─ vite.config.ts
 ├─ vercel.json
-├─ public/                # static public assets
+├─ public/                # static assets
 └─ src/
    ├─ main.tsx            # app bootstrap
-   ├─ App.tsx             # router + providers (QueryClient, Toaster)
-   ├─ pages/              # route pages (Index, Projects, Blog, About...)
-   ├─ components/         # visual components (Navbar, Hero, ProjectCard)
-   ├─ components/ui/      # UI primitives (radix/shadcn wrappers)
-   ├─ data/               # mockProjects.ts, blog images, local content
-   ├─ api.ts              # small helper to call backend (placeholder URL)
-   ├─ hooks/              # custom hooks (use-mobile, use-toast)
+   ├─ App.tsx             # router + providers
+   ├─ pages/              # route pages
+   ├─ components/         # components (Navbar, Hero, ProjectCard)
+   ├─ components/ui/      # UI primitives
+   ├─ data/               # mockProjects.ts, blog images
+   ├─ api.ts              # API helper (placeholder URL)
+   ├─ hooks/              # custom hooks
    └─ lib/                # utils
-
-
----
-
-How content & data work — where to edit
-
-Project data (the items shown on the Projects page and details) are defined in:
-
-
-src/data/mockProjects.ts
-
-Edit this file to add / update projects. Each project includes fields like id, title, description, fullDescription, tags, language, createdAt, codeSnippet, and imageUrl.
-
-Blog images and other example media live in:
-
-
-src/data/*.jpeg (Blog1.jpeg, Blog2.jpeg...)
-
-Pages use the static data import — to switch to a dynamic API you can replace imports with calls to src/api.ts and use @tanstack/react-query to fetch live data.
-
-
+```
 
 ---
 
-API config (placeholder)
+## 📝 How Content & Data Work
 
-The project contains a small API helper at src/api.ts. By default it uses a local placeholder API_URL:
+* **Projects** → `src/data/mockProjects.ts`
+* **Blog images** → `src/data/*.jpeg`
+* Replace static imports with `src/api.ts` + **react-query** for live API integration.
 
+---
+
+## 🌐 API Config (placeholder)
+
+```ts
 // src/api.ts
-const API_URL = "http://localhost:5000/api"; // change for production
-
-If you add a real backend, update that constant or wire it to an environment variable (e.g. import.meta.env.VITE_API_URL) and use react-query to fetch.
-
-Tip: Replace the hard-coded API_URL with a Vite env variable for production:
-
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+```
 
-Remember to add VITE_API_URL in your Vercel/GitHub Actions environment when deploying.
-
-
----
-
-Deployment (Vercel)
-
-This project already includes a vercel.json rewrite that routes everything to / for client-side routing.
-
-Automatic (recommended)
-
-1. Push repo to GitHub.
-
-
-2. In Vercel, click New Project → import from GitHub.
-
-
-3. Vercel will detect a Vite React app. If needed, set:
-
-Build command: npm run build
-
-Output directory: dist
-
-
-
-4. Add environment variables (e.g. VITE_API_URL) if required.
-
-
-
-Manual (vercel CLI)
-
-npm i -g vercel
-vercel login
-vercel --prod
-
+👉 Add `VITE_API_URL` in `.env` and your deployment platform (Vercel/GitHub Actions).
 
 ---
 
-Detailed analysis & architecture notes (deep analysis)
+## 🚀 Deployment (Vercel)
 
-1) Architecture & code organization
+This repo includes a **Vercel rewrite** for SPA routing.
 
-A classic Vite SPA: src/main.tsx mounts App.tsx which contains the QueryClientProvider and BrowserRouter.
+**Steps**:
 
-Pages are organized under src/pages and are composed of smaller src/components components.
+1. Push repo to GitHub
+2. Import into Vercel
+3. Configure build:
 
-UI primitives live in src/components/ui — this pattern matches the shadcn-style component wrappers around Radix primitives.
-
-Data is currently static (mock data in src/data/mockProjects.ts), which makes the site ideal as a static marketing/demo site.
-
-
-2) Data & state
-
-The code includes @tanstack/react-query (QueryClient) — but most content is static. The repo is ready to adopt dynamic data: swap imports for useQuery hooks and point src/api.ts to your backend.
-
-
-3) Routing
-
-Client-side routing via react-router-dom. vercel.json contains a rewrite so direct deep-links will work when deployed to Vercel.
-
-
-4) UX & accessibility
-
-Good: themed UI primitives, toasts, code blocks and layout.
-
-Possible issues to check: validate that all <img> tags have meaningful alt attributes, ensure focus styles for keyboard navigation, and check color contrast for gradient text/overlays.
-
-
-5) Performance
-
-Static assets (JPEGs) are committed to the repo. For production, consider optimizing image formats (WebP/AVIF), adding srcset, or using an image CDN.
-
-
-6) Observability & metrics
-
-There are references to socket/io and chart components in the mock code — if you enable a backend emitting metrics, the UI can visualize them. Right now the socket host is not production-ready (check the code for io('ws://localhost:8080')).
-
-
+   * Build command → `npm run build`
+   * Output dir → `dist`
+4. Add env vars if needed (`VITE_API_URL`)
 
 ---
 
-Recommended improvements & priorities (practical roadmap)
+## 🔍 Detailed Analysis & Architecture Notes
 
-Short term (low effort)
-
-1. Add LICENSE (e.g. MIT) to the repo.
-
-
-2. Add README.md (this file) — done.
-
-
-3. Replace the hard-coded API_URL in src/api.ts with import.meta.env.VITE_API_URL. Add an example .env.example file.
-
-
-4. Add missing alt attributes for all images and verify keyboard navigation.
-
-
-
-Medium term (medium effort)
-
-1. Move sample content to a lightweight headless CMS (Sanity/Contentful/Notion/Firestore) or an API to allow non-dev content updates. Use react-query for cache/refresh.
-
-
-2. Add optimization for images: convert to WebP/AVIF and serve responsive srcset.
-
-
-3. Add GitHub Actions: lint, typecheck, build, run unit tests.
-
-
-
-Long term (high effort)
-
-1. Add SSR or prerendering if SEO or crawling by search engines is a high priority (Vite + SSG frameworks or migrate to Next.js).
-
-
-2. Add E2E tests (Cypress/Playwright) and structured CI pipelines.
-
-
-3. Add analytics + error reporting (Sentry/LogRocket) and performance monitoring.
-
-
-
+1. **Architecture**: Vite SPA, modular components, shadcn-style UI.
+2. **Data**: Mostly static → easily swappable with APIs.
+3. **Routing**: `react-router-dom` + Vercel SPA rewrites.
+4. **UX & a11y**: Good base, check `alt` tags & keyboard nav.
+5. **Performance**: Optimize images (WebP/AVIF, srcset).
+6. **Observability**: Placeholder socket + charts → extend with backend.
 
 ---
 
-How to add a new project (example)
+## 📌 Recommended Improvements
 
-Open src/data/mockProjects.ts and add an object to the exported list. Example snippet:
+### Short Term
 
+* ✅ Add LICENSE (MIT suggested)
+* ✅ Add README (this file)
+* 🔄 Replace hard-coded API\_URL → env variable
+* ♿ Improve accessibility (alt text, focus states)
+
+### Medium Term
+
+* 📡 Move content to CMS or backend API
+* 🖼 Optimize images (WebP/AVIF + responsive)
+* 🤖 Add GitHub Actions (lint, typecheck, build)
+
+### Long Term
+
+* ⚙️ Add SSR/SSG (for SEO) or migrate to Next.js
+* 🧪 Add E2E tests (Cypress/Playwright)
+* 📊 Add analytics + error reporting (Sentry/LogRocket)
+
+---
+
+## ➕ How to Add a New Project
+
+Edit `src/data/mockProjects.ts`:
+
+```ts
 {
   id: "new-proj-1",
   title: "My New MCP Project",
-  description: "A short description",
-  fullDescription: "Long form description...",
+  description: "Short description",
+  fullDescription: "Longer description...",
   level: "intermediate",
   tags: ["MCP", "example"],
   language: "typescript",
@@ -313,76 +202,55 @@ Open src/data/mockProjects.ts and add an object to the exported list. Example sn
   imageUrl: "/src/data/my-image.jpeg",
   githubUrl: "https://github.com/your/repo"
 }
-
-Then restart the dev server (or the UI may hot-reload depending on your environment).
-
+```
 
 ---
 
-How to contribute
+## 🤝 Contributing
 
-1. Fork the repository.
+1. Fork repo
+2. Create a branch:
 
+   ```bash
+   git checkout -b feat/add-new-project
+   ```
+3. Make changes & test with `npm run dev`
+4. Commit, push, and open a PR
 
-2. Create a feature branch:
+✅ Checklist:
 
-
-
-git checkout -b feat/add-new-project
-
-3. Make changes, run npm run dev locally and confirm everything works.
-
-
-4. Commit, push, and create a PR with a clear description of changes.
-
-
-
-Contribution checklist
-
-[ ] Linting passes (npm run lint)
-
-[ ] TypeScript build (tsc --noEmit) passes
-
-[ ] If adding images, use optimized formats and add alt text
-
-
+* [ ] Lint passes (`npm run lint`)
+* [ ] TypeScript build passes (`tsc --noEmit`)
+* [ ] Images optimized + alt text added
 
 ---
 
-Troubleshooting / FAQ
+## ❓ Troubleshooting
 
-Q: npm run dev not starting / port in use?
-A: Vite defaults to port 5173. Kill other processes or run PORT=5174 npm run dev.
-
-Q: 404 on refresh in production?
-A: Ensure your hosting rewrites are configured (Vercel vercel.json already rewrites to /). For other hosts configure an SPA fallback to index.html.
-
-
+* **Port in use?** → Vite defaults to `5173`. Try `PORT=5174 npm run dev`.
+* **404 on refresh in production?** → SPA fallback required (Vercel already configured).
 
 ---
 
-License
+## 📜 License
 
-The repository currently does not include an explicit license file. If you want to open-source this project, add a LICENSE file (e.g., MIT) at the repo root. Example (MIT):
-
-MIT License
-
-Copyright (c) 2025 Harsh Bhardwaj 
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-... (add the full MIT text here) ...
-
+MIT License © 2025 [Harsh Bhardwaj](https://github.com/)
 
 ---
 
-Acknowledgements
+## 🙏 Acknowledgements
 
-This project uses many community packages (Radix UI, Tailwind, Vite, React, TanStack Query). Thanks to those maintainers and the open-source ecosystem.
-
+Thanks to the open-source ecosystem: **Vite, React, Tailwind, Radix UI, TanStack Query**, and more.
 
 ---
 
-Contact
+## 📬 Contact
 
-If you want me to extend this README further (add badges, CI examples, PR templates, or a .env.example), tell me what you want and I will add it.
+For issues, ideas, or improvements → open a PR or issue.
 
+```
+
+---
+
+Would you like me to **design a custom logo banner (SVG/PNG)** for the top instead of just using the React logo?
+```
