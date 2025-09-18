@@ -47,7 +47,17 @@ const ProjectDetail = () => {
     );
   }
 
+  // ✅ Updated handleDownload function
   const handleDownload = () => {
+    if (!project?.downloadUrl) return;
+
+    const link = document.createElement("a");
+    link.href = project.downloadUrl;
+    link.download = `${project.title}.${project.language === 'python' ? 'py' : 'txt'}`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
     toast({
       title: "Download started!",
       description: `Downloading ${project.title} project files.`,
