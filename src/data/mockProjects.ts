@@ -56,7 +56,7 @@ class BasicMCPServer:
 if __name__ == "__main__":
     server = BasicMCPServer()
     asyncio.run(server.start())`,
-    downloadUrl: "",
+    downloadUrl: "https://raw.githubusercontent.com/Harshsfd/MCP-PROJECT-SHOW/main/MCP-1.jsx",
     githubUrl: "https://github.com/Harshsfd/MCP-PROJECT-SHOW/blob/main/MCP-1.jsx"
   },
   {
