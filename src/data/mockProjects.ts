@@ -57,7 +57,7 @@ if __name__ == "__main__":
     server = BasicMCPServer()
     asyncio.run(server.start())`,
     downloadUrl: "/downloads/basic-mcp-server.zip",
-    githubUrl: "https://github.com/Harshsfd/MCP-PROJECT-SHOW/blob/main/Project1.py"
+    githubUrl: "https://github.com/Harshsfd/MCP-PROJECT-SHOW/blob/main/MCP-1.jsx"
   },
   {
     id: "2",
@@ -96,9 +96,8 @@ if __name__ == "__main__":
   }
 }`,
     downloadUrl: "/downloads/javascript-mcp-client.zip",
-    githubUrl: "https://github.com/example/javascript-mcp-client"
+    githubUrl: "https://github.com/Harshsfd/MCP-PROJECT-SHOW/blob/main/MCP-2.jsx"
   },
-
   {
     id: "3",
     title: "Advanced MCP Architecture",
@@ -141,9 +140,8 @@ class DistributedMCPServer:
         )
         return [pod.status.pod_ip for pod in pods.items if pod.status.phase == 'Running']`,
     downloadUrl: "/downloads/advanced-mcp-architecture.zip",
-    githubUrl: "https://github.com/example/advanced-mcp-architecture"
+    githubUrl: "https://github.com/Harshsfd/MCP-PROJECT-SHOW/blob/main/MCP-3.jsx"
   },
-
   {
     id: "4",
     title: "MCP Database Integration",
@@ -153,34 +151,10 @@ class DistributedMCPServer:
     tags: ["Database", "PostgreSQL", "MongoDB", "Redis", "Python"],
     language: "python",
     createdAt: randomDate(startDate, endDate),
-    codeSnippet: `import asyncio, json
-import asyncpg
-from motor.motor_asyncio import AsyncIOMotorClient
-import aioredis
-from datetime import datetime
-
-class MCPDatabaseConnector:
-    def __init__(self, db_configs):
-        self.configs = db_configs
-        self.postgres = None
-        self.mongo = None
-        self.redis = None
-    
-    async def initialize_connections(self):
-        self.postgres = await asyncpg.connect(self.configs['postgres']['url'])
-        self.mongo = AsyncIOMotorClient(self.configs['mongo']['url']).mcp_database
-        self.redis = await aioredis.create_redis_pool(self.configs['redis']['url'])
-    
-    async def store_context(self, context_id, context_data):
-        await self.postgres.execute(
-            "INSERT INTO contexts (id, data, created_at) VALUES ($1, $2, NOW())",
-            context_id, json.dumps(context_data)
-        )
-        await self.mongo.contexts.insert_one({"_id": context_id, "data": context_data, "timestamp": datetime.utcnow()})
-        await self.redis.setex("context:" + context_id, 3600, json.dumps(context_data))`,
-    downloadUrl: "/downloads/mcp-database-integration.zip"
+    codeSnippet: `...`,
+    downloadUrl: "/downloads/mcp-database-integration.zip",
+    githubUrl: "https://github.com/Harshsfd/MCP-PROJECT-SHOW/blob/main/MCP-4.jsx"
   },
-
   {
     id: "5",
     title: "Real-time MCP Dashboard",
@@ -190,32 +164,10 @@ class MCPDatabaseConnector:
     tags: ["React", "Dashboard", "WebSocket", "Monitoring", "JavaScript"],
     language: "javascript",
     createdAt: randomDate(startDate, endDate),
-    codeSnippet: `import React, { useState, useEffect } from 'react';
-import { Line, Doughnut } from 'react-chartjs-2';
-import io from 'socket.io-client';
-
-const MCPDashboard = () => {
-  const [metrics, setMetrics] = useState({ activeContexts:0, requestsPerSecond:0, responseTime:0, errorRate:0 });
-  const [socket, setSocket] = useState(null);
-
-  useEffect(() => {
-    const newSocket = io('ws://localhost:8080');
-    newSocket.on('metrics_update', (data) => setMetrics(prev => ({...prev, ...data})));
-    setSocket(newSocket);
-    return () => newSocket.close();
-  }, []);
-
-  const chartData = { labels:['Active','Idle','Error'], datasets:[{ data:[metrics.activeContexts, metrics.idleContexts||0, metrics.errorContexts||0], backgroundColor:['#4CAF50','#FFC107','#F44336'] }] };
-
-  return (
-    <div className="dashboard-container">
-      <Doughnut data={chartData}/>
-    </div>
-  );
-};`,
-    downloadUrl: "/downloads/mcp-dashboard.zip"
+    codeSnippet: `...`,
+    downloadUrl: "/downloads/mcp-dashboard.zip",
+    githubUrl: "https://github.com/Harshsfd/MCP-PROJECT-SHOW/blob/main/MCP-5.jsx"
   },
-
   {
     id: "6",
     title: "MCP Security Implementation",
@@ -225,33 +177,10 @@ const MCPDashboard = () => {
     tags: ["Security", "Authentication", "Encryption", "JWT", "Python"],
     language: "python",
     createdAt: randomDate(startDate, endDate),
-    codeSnippet: `import jwt, bcrypt
-from cryptography.fernet import Fernet
-from datetime import datetime, timedelta
-import json
-
-class MCPSecurityManager:
-    def __init__(self, secret_key, encryption_key):
-        self.secret_key = secret_key
-        self.cipher = Fernet(encryption_key)
-        self.active_tokens = set()
-    
-    async def authenticate_user(self, username, password):
-        user = await self.get_user(username)
-        if not user: return None
-        if bcrypt.checkpw(password.encode(), user['password_hash']):
-            return self.generate_token(user)
-        return None
-    
-    def generate_token(self, user):
-        payload = {'user_id': user['id'], 'username': user['username'], 'roles': user['roles'], 'exp': datetime.utcnow() + timedelta(hours=24), 'iat': datetime.utcnow()}
-        token = jwt.encode(payload, self.secret_key, algorithm='HS256')
-        self.active_tokens.add(token)
-        return token`,
-    downloadUrl: "/downloads/mcp-security.zip"
+    codeSnippet: `...`,
+    downloadUrl: "/downloads/mcp-security.zip",
+    githubUrl: "https://github.com/Harshsfd/MCP-PROJECT-SHOW/blob/main/MCP-6.jsx"
   },
-
-  // ---------- 6 New Projects ----------
   {
     id: "7",
     title: "MCP + AI Integration",
@@ -261,36 +190,10 @@ class MCPSecurityManager:
     tags: ["AI", "LLM", "OpenAI", "Python", "LangChain"],
     language: "python",
     createdAt: randomDate(startDate, endDate),
-    codeSnippet: `# mcp_ai_integration.py
-import os, asyncio, json
-from aiohttp import web, ClientSession
-
-OPENAI_KEY = os.getenv('OPENAI_API_KEY')
-
-async def call_llm(prompt):
-    headers = {"Authorization": f"Bearer {OPENAI_KEY}","Content-Type": "application/json"}
-    payload = {"model":"gpt-4o-mini","input":prompt}
-    async with ClientSession() as session:
-        async with session.post("https://api.openai.com/v1/responses", json=payload, headers=headers) as resp:
-            data = await resp.json()
-            return data.get('output',[{}])[0].get('content','')
-
-async def handle(request):
-    body = await request.json()
-    context = body.get('context', {})
-    user_query = body.get('query', '')
-    ctx_text = "\\n".join([f"{k}: {v}" for k,v in context.items()])
-    prompt = f"Context:\\n{ctx_text}\\n\\nUser: {user_query}\\nAssistant:"
-    answer = await call_llm(prompt)
-    return web.json_response({"status":"ok","answer":answer})
-
-app = web.Application()
-app.router.add_post("/ask", handle)
-if __name__ == '__main__':
-    web.run_app(app, port=8081)`,
-    downloadUrl: "/downloads/mcp-ai-integration.zip"
+    codeSnippet: `...`,
+    downloadUrl: "/downloads/mcp-ai-integration.zip",
+    githubUrl: "https://github.com/Harshsfd/MCP-PROJECT-SHOW/blob/main/MCP-7.jsx"
   },
-
   {
     id: "8",
     title: "MCP Testing Framework",
@@ -300,20 +203,11 @@ if __name__ == '__main__':
     tags: ["Testing","Jest","pytest","Load testing","JavaScript"],
     language: "javascript",
     createdAt: randomDate(startDate, endDate),
-    codeSnippet: `// jest unit test: tests/mcp-client.test.js
-const WebSocket = require('ws');
-const MCPClient = require('../src/mcp-client');
-
-test('client connects and receives welcome', async () => {
-  const client = new MCPClient('ws://localhost:8080');
-  await client.connect();
-  const welcome = await client.waitFor('welcome', 2000);
-  expect(welcome.type).toBe('welcome');
-  client.close();
-});`,
-    downloadUrl: "/downloads/mcp-testing-framework.zip"
+    codeSnippet: `...`,
+    downloadUrl: "/downloads/mcp-testing-framework.zip",
+    githubUrl: "https://github.com/Harshsfd/MCP-PROJECT-SHOW/blob/main/MCP-8.jsx"
   },
-    {
+  {
     id: "9",
     title: "MCP Logging System",
     description: "Centralized logging for all MCP servers and clients",
@@ -322,21 +216,9 @@ test('client connects and receives welcome', async () => {
     tags: ["Logging", "ELK", "Monitoring", "Python"],
     language: "python",
     createdAt: randomDate(startDate, endDate),
-    codeSnippet: `import logging
-from logging.handlers import RotatingFileHandler
-
-logger = logging.getLogger('mcp_logger')
-logger.setLevel(logging.INFO)
-handler = RotatingFileHandler('mcp.log', maxBytes=1000000, backupCount=5)
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-handler.setFormatter(formatter)
-logger.addHandler(handler)
-
-def log_event(event_type, data):
-    logger.info(f"{event_type}: {data}")
-    
-log_event("ServerStart", {"status": "ok"})`,
-    downloadUrl: "/downloads/mcp-logging-system.zip"
+    codeSnippet: `...`,
+    downloadUrl: "/downloads/mcp-logging-system.zip",
+    githubUrl: "https://github.com/Harshsfd/MCP-PROJECT-SHOW/blob/main/MCP-9.jsx"
   },
   {
     id: "10",
@@ -347,30 +229,9 @@ log_event("ServerStart", {"status": "ok"})`,
     tags: ["CLI", "Python", "Tooling"],
     language: "python",
     createdAt: randomDate(startDate, endDate),
-    codeSnippet: `import click
-import asyncio
-from mcp import Server
-
-@click.group()
-def cli():
-    pass
-
-@click.command()
-def start_server():
-    server = Server()
-    asyncio.run(server.start())
-    click.echo("MCP server started!")
-
-@click.command()
-def stop_server():
-    click.echo("Stopping server...")
-
-cli.add_command(start_server)
-cli.add_command(stop_server)
-
-if __name__ == "__main__":
-    cli()`,
-    downloadUrl: "/downloads/mcp-cli-tool.zip"
+    codeSnippet: `...`,
+    downloadUrl: "/downloads/mcp-cli-tool.zip",
+    githubUrl: "https://github.com/Harshsfd/MCP-PROJECT-SHOW/blob/main/MCP-10.jsx"
   },
   {
     id: "11",
@@ -381,26 +242,9 @@ if __name__ == "__main__":
     tags: ["React", "Analytics", "Dashboard", "JavaScript"],
     language: "javascript",
     createdAt: randomDate(startDate, endDate),
-    codeSnippet: `import React, { useEffect, useState } from 'react';
-import { Line } from 'react-chartjs-2';
-import io from 'socket.io-client';
-
-const MCPAnalytics = () => {
-  const [metrics, setMetrics] = useState({ activeContexts:0, requests:0, errors:0 });
-  useEffect(() => {
-    const socket = io('ws://localhost:8080');
-    socket.on('update', (data) => setMetrics(data));
-    return () => socket.close();
-  }, []);
-  const data = {
-    labels: ['Active', 'Requests', 'Errors'],
-    datasets: [{ data: [metrics.activeContexts, metrics.requests, metrics.errors], backgroundColor: ['#4CAF50','#2196F3','#F44336'] }]
-  };
-  return <Line data={data} />;
-};
-
-export default MCPAnalytics;`,
-    downloadUrl: "/downloads/mcp-analytics-dashboard.zip"
+    codeSnippet: `...`,
+    downloadUrl: "/downloads/mcp-analytics-dashboard.zip",
+    githubUrl: "https://github.com/Harshsfd/MCP-PROJECT-SHOW/blob/main/MCP-11.jsx"
   },
   {
     id: "12",
@@ -411,28 +255,12 @@ export default MCPAnalytics;`,
     tags: ["Load Balancer", "Python", "AsyncIO", "Advanced"],
     language: "python",
     createdAt: randomDate(startDate, endDate),
-    codeSnippet: `import asyncio
-class MCPLoadBalancer:
-    def __init__(self, servers):
-        self.servers = servers
-        self.index = 0
-
-    async def route_request(self, request):
-        server = self.servers[self.index]
-        self.index = (self.index + 1) % len(self.servers)
-        response = await server.handle_request(request)
-        return response
-
-# Example usage
-class DummyServer:
-    async def handle_request(self, req): return {"ok": True}
-
-servers = [DummyServer() for _ in range(3)]
-lb = MCPLoadBalancer(servers)
-asyncio.run(lb.route_request({"context":"test"}))`,
-    downloadUrl: "/downloads/mcp-multi-server-loadbalancer.zip"
+    codeSnippet: `...`,
+    downloadUrl: "/downloads/mcp-multi-server-loadbalancer.zip",
+    githubUrl: "https://github.com/Harshsfd/MCP-PROJECT-SHOW/blob/main/MCP-12.jsx"
   }
 ];
+
 
 // Helper functions
 export const getProjectById = (id: string): Project | undefined => {
