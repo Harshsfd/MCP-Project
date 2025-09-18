@@ -92,6 +92,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             </Button>
           </Link>
           
+{/* Description 
           <Button
             variant="outline"
             size="icon"
@@ -99,7 +100,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             className="glass-card hover:bg-card/50"
           >
             <Download className="w-4 h-4" />
-          </Button>
+          </Button> */}
           
           {project.githubUrl && (
             <Button
