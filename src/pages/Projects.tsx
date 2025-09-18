@@ -4,8 +4,19 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Search, Filter, Code2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
-import ProjectCard from "@/components/ProjectCard";
 import { mockProjects } from "@/data/mockProjects";
+
+// ✅ JSON download function
+const downloadProjectData = (project: any) => {
+  const fileData = JSON.stringify(project, null, 2);
+  const blob = new Blob([fileData], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `${project.title.replace(/\s+/g, "_")}.json`;
+  link.click();
+};
 
 const Projects = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -172,7 +183,24 @@ const Projects = () => {
             {filteredProjects.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredProjects.map((project) => (
-                  <ProjectCard key={project.id} project={project} />
+                  <div key={project.id} className="glass-card p-4 rounded-lg shadow">
+                    <h3 className="text-xl font-bold">{project.title}</h3>
+                    <p className="text-sm text-muted-foreground">{project.description}</p>
+
+                    <div className="flex gap-2 mt-4">
+                      {/* GitHub link */}
+                      <Button asChild>
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                          GitHub
+                        </a>
+                      </Button>
+
+                      {/* ✅ Download JSON */}
+                      <Button onClick={() => downloadProjectData(project)}>
+                        Download JSON
+                      </Button>
+                    </div>
+                  </div>
                 ))}
               </div>
             ) : (
