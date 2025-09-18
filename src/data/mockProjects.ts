@@ -57,7 +57,7 @@ if __name__ == "__main__":
     server = BasicMCPServer()
     asyncio.run(server.start())`,
     downloadUrl: "/downloads/basic-mcp-server.zip",
-    githubUrl: "https://github.com/example/basic-mcp-server"
+    githubUrl: "https://github.com/Harshsfd/MCP-PROJECT-SHOW/blob/main/Project1.py"
   },
   {
     id: "2",
